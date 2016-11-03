@@ -8,8 +8,8 @@ Akka Http marshallers for [Circe](https://github.com/travisbrown/circe).
 ## Dependencies
 
 * scala 2.11/2.12
-* circe 0.6.0
-* akka-http 3.0.0
+* circe 0.6.0-RC1
+* akka-http 3.0.0-RC1
 
 ## Add to project
 

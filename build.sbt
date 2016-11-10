@@ -1,8 +1,8 @@
 import de.heikoseeberger.sbtheader.AutomateHeaderPlugin
 import de.heikoseeberger.sbtheader.license.Apache2_0
 
-lazy val akkaHttpVersion = "3.0.0-RC1"
-lazy val circeVersion    = "0.6.0-RC1"
+lazy val akkaHttpVersion = "10.0.0-RC2"
+lazy val circeVersion    = "0.6.0"
 
 lazy val buildSettings = Seq(
   organization := "io.fcomb",
@@ -42,14 +42,10 @@ lazy val commonSettings =
         "-Xlint",
         "-Xfatal-warnings",
         "-Xfuture",
-        "-Ybackend:GenBCode",
         "-Ydelambdafy:method",
         "-Yno-adapted-args",
         "-Yno-imports",
         "-Yno-predef",
-        "-Yopt-warnings",
-        "-Yopt:l:classpath",
-        "-Yopt:unreachable-code",
         "-Ywarn-dead-code",
         "-Ywarn-infer-any",
         "-Ywarn-numeric-widen",

@@ -8,8 +8,8 @@ Akka Http marshallers for [Circe](https://github.com/travisbrown/circe).
 ## Dependencies
 
 * scala 2.11/2.12
-* circe 0.6.0-RC1
-* akka-http 3.0.0-RC1
+* circe 0.6.0
+* akka-http 10.0.0-RC2
 
 ## Add to project
 
@@ -22,7 +22,7 @@ resolvers += Resolver.bintrayRepo("fcomb", "maven")
 ### Add dependencies to your `build.sbt`
 
 ```scala
-libraryDependencies += "io.fcomb" %% "akka-http-circe" % "1.0-RC1"
+libraryDependencies += "io.fcomb" %% "akka-http-circe" % "1.0-RC2"
 ```
 
 ## Usage

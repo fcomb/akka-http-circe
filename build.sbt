@@ -2,7 +2,7 @@ import de.heikoseeberger.sbtheader.AutomateHeaderPlugin
 import de.heikoseeberger.sbtheader.license.Apache2_0
 
 lazy val akkaHttpVersion = "10.0.0-RC2"
-lazy val circeVersion    = "0.6.0"
+lazy val circeVersion    = "0.6.1"
 
 lazy val buildSettings = Seq(
   organization := "io.fcomb",
@@ -13,7 +13,8 @@ lazy val buildSettings = Seq(
   organizationHomepage := Option(new URL("https://github.com/fcomb/akka-http-circe")),
   scalaVersion := "2.11.8",
   crossScalaVersions := Seq("2.11.8", "2.12.0"),
-  headers := Map("scala" -> Apache2_0("2016", "fcomb. <https://github.com/fcomb/akka-http-circe>")),
+  headers := Map(
+    "scala" -> Apache2_0("2016", "fcomb. <https://github.com/fcomb/akka-http-circe>")),
   scalafmtConfig := Some(file(".scalafmt.conf"))
 )
 
@@ -87,7 +88,7 @@ lazy val allSettings = buildSettings ++ commonSettings ++ publishSettings
 lazy val root = project
   .in(file("."))
   .enablePlugins(AutomateHeaderPlugin)
-  .settings(allSettings: _*)
+  .settings(allSettings)
   .settings(publishSettings)
   .settings(
     name := "akka-http-circe",

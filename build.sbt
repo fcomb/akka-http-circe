@@ -12,7 +12,7 @@ lazy val buildSettings = Seq(
   version in ThisBuild := s"${akkaHttpVersion}_$circeVersion",
   homepage := Option(url("https://github.com/fcomb/akka-http-circe")),
   organizationHomepage := Option(new URL("https://github.com/fcomb/akka-http-circe")),
-  scalaVersion := "2.11.8",
+  scalaVersion := "2.12.0",
   crossScalaVersions := Seq("2.11.8", "2.12.0"),
   headers := Map(
     "scala" -> Apache2_0("2016", "fcomb. <https://github.com/fcomb/akka-http-circe>")),

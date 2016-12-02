@@ -21,9 +21,19 @@ resolvers += Resolver.bintrayRepo("fcomb", "maven")
 
 ### Add dependencies to your `build.sbt`
 
+Version is a string consisting of versions of akka-http and circe: `${akkaHttp}_${circe}`.
+
 ```scala
-libraryDependencies += "io.fcomb" %% "akka-http-circe" % "10.0.0_0.7.0-M1"
+libraryDependencies += "io.fcomb" %% "akka-http-circe" % "10.0.0_0.7.0-M1" // latest version
 ```
+
+## Release
+
+| akka-http-circe Release | Target akka-http version | Target circe version |
+|-------|---------------------|---------------------|
+|10.0.0_0.7.0-M1|10.0.0|0.7.0-M1|
+|10.0.0_0.6.1|10.0.0|0.6.1|
+|10.0.0_0.6.0|10.0.0|0.6.0|
 
 ## Usage
 

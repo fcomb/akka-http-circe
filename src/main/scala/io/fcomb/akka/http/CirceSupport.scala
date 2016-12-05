@@ -25,8 +25,8 @@ import io.circe.syntax._
 import io.circe.{Decoder, Encoder, Printer}
 import java.lang.String
 
-object CirceSupport {
-  private val compactPrinter: Printer = Printer(
+trait CirceSupport {
+  private final val compactPrinter: Printer = Printer(
     preserveOrder = false,
     dropNullKeys = true,
     indent = ""
@@ -47,3 +47,5 @@ object CirceSupport {
       .stringMarshaller(MediaTypes.`application/json`)
       .compose(obj => printer.pretty(obj.asJson))
 }
+
+object CirceSupport extends CirceSupport

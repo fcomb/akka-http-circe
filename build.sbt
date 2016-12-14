@@ -14,55 +14,52 @@ lazy val buildSettings = Seq(
   organizationHomepage := Option(new URL("https://github.com/fcomb/akka-http-circe")),
   scalaVersion := "2.12.1",
   crossScalaVersions := Seq("2.11.8", "2.12.1"),
-  headers := Map(
-    "scala" -> Apache2_0("2016", "fcomb. <https://github.com/fcomb/akka-http-circe>")),
-  scalafmtConfig := Some(file(".scalafmt.conf"))
+  headers := Map("scala" -> Apache2_0("2016", "fcomb. <https://github.com/fcomb/akka-http-circe>"))
 )
 
 lazy val commonSettings =
-  reformatOnCompileSettings ++
-    Seq(
-      resolvers ++= Seq(
-        "Typesafe Releases" at "http://repo.typesafe.com/typesafe/maven-releases/",
-        Resolver.jcenterRepo,
-        Resolver.sonatypeRepo("releases"),
-        Resolver.sonatypeRepo("snapshots")
-      ),
-      scalacOptions ++= Seq(
-        "-encoding",
-        "UTF-8",
-        "-target:jvm-1.8",
-        "-unchecked",
-        "-deprecation",
-        "-feature",
-        "-language:higherKinds",
-        "-language:existentials",
-        "-language:postfixOps",
-        "-Xexperimental",
-        "-Xlint",
-        "-Xfatal-warnings",
-        "-Xfuture",
-        "-Ydelambdafy:method",
-        "-Yno-adapted-args",
-        "-Yno-imports",
-        "-Yno-predef",
-        "-Ywarn-dead-code",
-        "-Ywarn-infer-any",
-        "-Ywarn-numeric-widen",
-        "-Ywarn-unused",
-        "-Ywarn-unused-import",
-        "-Ywarn-value-discard"
-      ),
-      javaOptions ++= Seq("-Dfile.encoding=UTF-8"),
-      javacOptions ++= Seq(
-        "-source",
-        "1.8",
-        "-target",
-        "1.8",
-        "-Xlint:unchecked",
-        "-Xlint:deprecation"
-      )
+  Seq(
+    resolvers ++= Seq(
+      "Typesafe Releases" at "http://repo.typesafe.com/typesafe/maven-releases/",
+      Resolver.jcenterRepo,
+      Resolver.sonatypeRepo("releases"),
+      Resolver.sonatypeRepo("snapshots")
+    ),
+    scalacOptions ++= Seq(
+      "-encoding",
+      "UTF-8",
+      "-target:jvm-1.8",
+      "-unchecked",
+      "-deprecation",
+      "-feature",
+      "-language:higherKinds",
+      "-language:existentials",
+      "-language:postfixOps",
+      "-Xexperimental",
+      "-Xlint",
+      "-Xfatal-warnings",
+      "-Xfuture",
+      "-Ydelambdafy:method",
+      "-Yno-adapted-args",
+      "-Yno-imports",
+      "-Yno-predef",
+      "-Ywarn-dead-code",
+      "-Ywarn-infer-any",
+      "-Ywarn-numeric-widen",
+      "-Ywarn-unused",
+      "-Ywarn-unused-import",
+      "-Ywarn-value-discard"
+    ),
+    javaOptions ++= Seq("-Dfile.encoding=UTF-8"),
+    javacOptions ++= Seq(
+      "-source",
+      "1.8",
+      "-target",
+      "1.8",
+      "-Xlint:unchecked",
+      "-Xlint:deprecation"
     )
+  )
 
 lazy val publishSettings = Seq(
   bintrayOrganization := Some("fcomb"),

@@ -19,6 +19,7 @@ package io.fcomb.akka.http
 import akka.http.scaladsl.marshalling.{Marshaller, ToEntityMarshaller}
 import akka.http.scaladsl.model.{ContentTypes, MediaTypes}
 import akka.http.scaladsl.unmarshalling.{FromEntityUnmarshaller, Unmarshaller}
+import akka.util.ByteString
 import cats.syntax.either._
 import io.circe.jawn._
 import io.circe.syntax._
@@ -44,8 +45,8 @@ trait CirceSupport {
   final implicit def jsonMarshaller[T: Encoder](
       implicit printer: Printer = compactPrinter): ToEntityMarshaller[T] =
     Marshaller
-      .stringMarshaller(MediaTypes.`application/json`)
-      .compose(obj => printer.pretty(obj.asJson))
+      .byteStringMarshaller(MediaTypes.`application/json`)
+      .compose(obj => ByteString(printer.prettyByteBuffer(obj.asJson)))
 }
 
 object CirceSupport extends CirceSupport

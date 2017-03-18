@@ -1,7 +1,7 @@
 import de.heikoseeberger.sbtheader.AutomateHeaderPlugin
 import de.heikoseeberger.sbtheader.license.Apache2_0
 
-lazy val akkaHttpVersion = "10.0.4"
+lazy val akkaHttpVersion = "10.0.5"
 lazy val circeVersion    = "0.7.0"
 
 lazy val buildSettings = Seq(

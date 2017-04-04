@@ -24,13 +24,14 @@ resolvers += Resolver.bintrayRepo("fcomb", "maven")
 Version is a string consisting of versions of akka-http and circe: `${akkaHttp}_${circe}`.
 
 ```scala
-libraryDependencies += "io.fcomb" %% "akka-http-circe" % "10.0.5_0.7.0" // latest version
+libraryDependencies += "io.fcomb" %% "akka-http-circe" % "10.0.5_0.7.1" // latest version
 ```
 
 ## Release
 
 | akka-http-circe Release | Target akka-http version | Target circe version |
 |-------|---------------------|---------------------|
+|10.0.5_0.7.1|10.0.5|0.7.1|
 |10.0.5_0.7.0|10.0.5|0.7.0|
 |10.0.4_0.7.0|10.0.4|0.7.0|
 |10.0.3_0.7.0|10.0.3|0.7.0|

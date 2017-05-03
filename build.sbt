@@ -1,20 +1,20 @@
 import de.heikoseeberger.sbtheader.AutomateHeaderPlugin
 import de.heikoseeberger.sbtheader.license.Apache2_0
 
-lazy val akkaHttpVersion = "10.0.5"
-lazy val circeVersion    = "0.7.1"
+lazy val akkaHttpVersion = "10.0.6"
+lazy val circeVersion    = "0.8.0-RC1"
 
 lazy val buildSettings = Seq(
   organization := "io.fcomb",
   organizationName := "fcomb",
   description := "Akka Http Circe marshallers",
-  startYear := Option(2016),
+  startYear := Option(2017),
   version in ThisBuild := s"${akkaHttpVersion}_$circeVersion",
   homepage := Option(url("https://github.com/fcomb/akka-http-circe")),
   organizationHomepage := Option(new URL("https://github.com/fcomb/akka-http-circe")),
-  scalaVersion := "2.12.1",
-  crossScalaVersions := Seq("2.11.9", "2.12.1"),
-  headers := Map("scala" -> Apache2_0("2016", "fcomb. <https://github.com/fcomb/akka-http-circe>"))
+  scalaVersion := "2.12.2",
+  crossScalaVersions := Seq("2.11.11", "2.12.2"),
+  headers := Map("scala" -> Apache2_0("2017", "fcomb. <https://github.com/fcomb/akka-http-circe>"))
 )
 
 lazy val commonSettings =

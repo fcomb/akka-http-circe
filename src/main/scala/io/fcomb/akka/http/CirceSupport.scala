@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 fcomb. <https://github.com/fcomb/akka-http-circe>
+ * Copyright 2017 fcomb. <https://github.com/fcomb/akka-http-circe>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

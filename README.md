@@ -8,7 +8,7 @@ Akka Http marshallers for [Circe](https://github.com/travisbrown/circe).
 ## Dependencies
 
 * scala 2.11/2.12
-* circe 0.8.0-RC1
+* circe 0.8.0
 * akka-http 10.0.6
 
 ## Add to project
@@ -24,13 +24,14 @@ resolvers += Resolver.bintrayRepo("fcomb", "maven")
 Version is a string consisting of versions of akka-http and circe: `${akkaHttp}_${circe}`.
 
 ```scala
-libraryDependencies += "io.fcomb" %% "akka-http-circe" % "10.0.6_0.8.0-RC1" // latest version
+libraryDependencies += "io.fcomb" %% "akka-http-circe" % "10.0.6_0.8.0" // latest version
 ```
 
 ## Release
 
 | akka-http-circe Release | Target akka-http version | Target circe version |
 |-------|---------------------|---------------------|
+|10.0.6_0.8.0|10.0.6|0.8.0|
 |10.0.6_0.8.0-RC1|10.0.6|0.8.0-RC1|
 |10.0.6_0.7.1|10.0.6|0.7.1|
 |10.0.5_0.7.1|10.0.5|0.7.1|
